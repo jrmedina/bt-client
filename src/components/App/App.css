@@ -9,14 +9,20 @@
 }
 
 .title {
-  padding-bottom: 1em;
+  padding-bottom: 2em;
 }
 
 @media (max-width: 424px) {
   .title {
-      padding-top: .5em;
-       margin-top: 5em;
+     padding-top: .5em;
+       margin-top: 6em;
+  
    
   }
 }
 
+@media (min-width: 425px) {
+  .title {
+margin-top: 5em;
+  }
+}
