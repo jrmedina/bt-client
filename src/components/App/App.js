@@ -1,10 +1,10 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import "./App.css";
 import CurrentWeather from "../CurrentWeather/CurrentWeather";
 import ForecastContainer from "../ForecastContainer/ForecastContainer";
 import Dropdown from "../Dropdown/Dropdown";
 import Error from "../Error/Error";
+import "./App.css";
 
 const App = () => {
   return (
@@ -37,7 +37,7 @@ const App = () => {
             </>
           )}
         />
-        <Route path="*" render={() => <Error/>} />
+        <Route path="*" render={() => <Error />} />
       </Switch>
     </main>
   );
