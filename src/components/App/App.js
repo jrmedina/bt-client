@@ -3,13 +3,13 @@ import { Route, Switch } from "react-router-dom";
 import CurrentWeather from "../CurrentWeather/CurrentWeather";
 import ForecastContainer from "../ForecastContainer/ForecastContainer";
 import Dropdown from "../Dropdown/Dropdown";
-import Error from "../Error/Error";
+import Error from "../../assets/Error/Error";
 import "./App.css";
 
 const App = () => {
   return (
     <main className="App">
-      <h1 className="title">BLUETREAD Weather App</h1>
+      <h1 className="title">BlueTread Weather App</h1>
 
       <Switch>
         <Route
@@ -26,7 +26,6 @@ const App = () => {
             </>
           )}
         />
-
         <Route
           exact
           path="/"

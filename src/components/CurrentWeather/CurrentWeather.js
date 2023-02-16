@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { getCurrentWeather } from "../../utils/apiCalls";
-import LoadingWheel from "../LoadingWheel/LoadingWheel";
+import { getWeather } from "../../utils/apiCalls";
+import LoadingWheel from "../../assets/LoadingWheel/LoadingWheel";
 import "./CurrentWeather.css";
 
 const CurrentWeather = () => {
@@ -12,10 +12,11 @@ const CurrentWeather = () => {
 
   useEffect(() => {
     if (!prevLocationRef.current) {
-      getCurrentWeather("denver").then((data) => setWeatherData(data));
+      getWeather("denver").then((data) => setWeatherData(data));
+      
       prevLocationRef.current = location;
     } else if (prevLocationRef.current !== location) {
-      getCurrentWeather(location.pathname.substring(1)).then((data) =>
+      getWeather(location.pathname.substring(1)).then((data) =>
         setWeatherData(data)
       );
       prevLocationRef.current = location;

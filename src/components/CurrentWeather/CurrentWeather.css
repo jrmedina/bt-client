@@ -21,6 +21,10 @@
   width: 40%;
 }
 
+.current-weather p{
+font-weight: bolder;
+}
+
 .current-weather button {
   margin-bottom: 2em;
 }

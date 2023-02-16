@@ -1,3 +1,7 @@
 .dropdown-container {
   margin-bottom: 2em;
 }
+
+.dropdown-container label{
+font-weight: bold
+}
