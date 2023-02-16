@@ -13,7 +13,6 @@ const CurrentWeather = () => {
   useEffect(() => {
     if (!prevLocationRef.current) {
       getWeather("denver").then((data) => setWeatherData(data));
-      
       prevLocationRef.current = location;
     } else if (prevLocationRef.current !== location) {
       getWeather(location.pathname.substring(1)).then((data) =>
