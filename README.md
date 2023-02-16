@@ -1,5 +1,5 @@
 <h1 align="center">
-Bluetread Tech Challenge<br/>
+BlueTread Tech Challenge<br/>
 
 </h1>
 <p align="center"> 
