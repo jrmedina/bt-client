@@ -4,7 +4,6 @@ const getCurrentWeather = async (location) => {
       `https://bt-server-beta.vercel.app/api/weather/${location}`
     );
     const json = await response.json();
-
     return json;
   } catch (error) {
     console.log(error);
