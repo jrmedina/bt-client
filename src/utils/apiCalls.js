@@ -4,7 +4,6 @@ const fetchData = async (location) => {
       `http://localhost:3001/api/weather/${location}`
     );
     const json = await response.json();
-
     return json;
   } catch (error) {
     console.log(error);
