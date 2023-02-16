@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { getForecast } from "../../utils/apiCalls";
 import ForecastCard from "../ForecastCard/ForecastCard";
+import "./ForecastContainer.css";
 
 const ForecastContainer = () => {
   const { location } = useParams();
@@ -15,6 +16,7 @@ const ForecastContainer = () => {
   if (!forecast) return "Loading";
 
   const forecastCards = forecast.map((f) => (
+    
     <ForecastCard
       date={f.date}
       day={f.day}
@@ -24,7 +26,13 @@ const ForecastContainer = () => {
     />
   ));
 
-  return <div>{forecastCards}</div>;
+  return (
+    <>
+      <Link to={"/"}><button>Go Home</button></Link>
+      <h2>14 day forecast for {location}</h2>
+      <div className="forecast-container">{forecastCards}</div>
+    </>
+  );
 };
 
 export default ForecastContainer;

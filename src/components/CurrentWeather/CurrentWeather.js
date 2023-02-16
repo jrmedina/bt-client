@@ -1,13 +1,24 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { getCurrentWeather } from "../../utils/apiCalls";
+import React, { useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { getCordsWeather, getCurrentWeather } from "../../utils/apiCalls";
+import getLocation from "../../utils/getLocation";
 
 const CurrentWeather = () => {
+  const location = useLocation();
+  const prevLocationRef = useRef();
   const [weatherData, setWeatherData] = useState();
 
   useEffect(() => {
-    getCurrentWeather("reno").then((data) => setWeatherData(data));
-  }, []);
+    if (!prevLocationRef.current) {
+      getCurrentWeather("denver").then((data) => setWeatherData(data));
+      prevLocationRef.current = location;
+    } else if (prevLocationRef.current !== location) {
+      getCurrentWeather(location.pathname.substring(1)).then((data) =>
+        setWeatherData(data)
+      );
+      prevLocationRef.current = location;
+    }
+  }, [location]);
 
   if (!weatherData) return "Loading";
 
