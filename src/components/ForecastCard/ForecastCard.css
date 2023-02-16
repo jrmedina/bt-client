@@ -1,0 +1,21 @@
+.forecast-card {
+  width: 33.33%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+@media (max-width: 424px) {
+  .forecast-card {
+    width: 33.33%;
+  }
+}
+@media (min-width: 425px) {
+  .forecast-card {
+    width: 25%;
+  }
+}
+@media (min-width: 1024px) {
+  .forecast-card {
+    width: 14%;
+  }
+}
