@@ -28,13 +28,13 @@ const ForecastContainer = () => {
   ));
 
   return (
-    <>
+    <div className="forecast-container">
       <Link to={"/"}>
         <button>Go Home</button>
       </Link>
       <h2>14 day forecast for {location}</h2>
-      <div className="forecast-container">{forecastCards}</div>
-    </>
+      <div className="forecast-cards">{forecastCards}</div>
+    </div>
   );
 };
 
