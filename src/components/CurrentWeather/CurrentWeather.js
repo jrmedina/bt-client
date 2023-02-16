@@ -35,8 +35,8 @@ const CurrentWeather = () => {
         src={weatherData.current.condition.icon}
         alt={weatherData.current.condition.text}
       />
-      <p>Actual:{weatherData.current.temp_f}&deg;F</p>
-      <p>Feels like:{weatherData.current.feelslike_f}&deg;F</p>
+      <p>Actual: {weatherData.current.temp_f}&deg;F</p>
+      <p>Feels like: {weatherData.current.feelslike_f}&deg;F</p>
 
       <Link to={`/${weatherData.location.name}/forecast`}>
         <button>See 14 Day Forecast</button>

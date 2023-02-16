@@ -1,7 +1,7 @@
 const getCurrentWeather = async (location) => {
   try {
     const response = await fetch(
-      `http://localhost:3001/api/weather/${location}`
+      `https://bt-server-beta.vercel.app/api/weather/${location}`
     );
     const json = await response.json();
 
@@ -14,7 +14,7 @@ const getCurrentWeather = async (location) => {
 const getForecast = async (location) => {
   try {
     const response = await fetch(
-      `http://localhost:3001/api/weather/${location}/forecast`
+      `https://bt-server-beta.vercel.app/api/weather/${location}/forecast`
     );
     const json = await response.json();
     return json;
