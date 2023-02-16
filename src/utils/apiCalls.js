@@ -1,4 +1,4 @@
-const fetchData = async (location) => {
+const getCurrentWeather = async (location) => {
   try {
     const response = await fetch(
       `http://localhost:3001/api/weather/${location}`
@@ -9,4 +9,16 @@ const fetchData = async (location) => {
     console.log(error);
   }
 };
-export { fetchData };
+
+const getForecast = async (location) => {
+  try {
+    const response = await fetch(
+      `http://localhost:3001/api/weather/${location}/forecast`
+    );
+    const json = await response.json();
+    return json;
+  } catch (error) {
+    console.log(error);
+  }
+};
+export { getCurrentWeather, getForecast };

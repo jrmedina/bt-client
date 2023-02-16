@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { fetchData } from "../../utils/apiCalls";
+import { getCurrentWeather } from "../../utils/apiCalls";
 
 const CurrentWeather = () => {
   const [weatherData, setWeatherData] = useState();
 
   useEffect(() => {
-    fetchData("reno").then((data) => setWeatherData(data));
+    getCurrentWeather("reno").then((data) => setWeatherData(data));
   }, []);
 
   if (!weatherData) return "Loading";

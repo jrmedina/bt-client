@@ -4,15 +4,17 @@ import { Route, Switch } from "react-router-dom";
 
 import "./App.css";
 import CurrentWeather from "../CurrentWeather/CurrentWeather";
+import ForecastContainer from "../ForecastContainer/ForecastContainer";
 
 const App = () => {
-
-
   return (
     <main className="App">
       <Switch>
         <Route exact path="/" render={() => <CurrentWeather />} />
-        <Route path="/:location/forecast" render={() => <p>forecast</p>} />
+        <Route
+          path="/:location/forecast"
+          render={() => <ForecastContainer />}
+        />
         <Route path="*" render={() => <p>ERROR</p>} />
       </Switch>
     </main>
