@@ -15,7 +15,7 @@ const Dropdown = () => {
         <option value="/denver">Current</option>
         <option value="/reno">Reno, NV</option>
         <option value="/austin">Austin, TX</option>
-        <option value="/tampa">Tampla, FL</option>
+        <option value="/tampa">Tampa, FL</option>
       </select>
     </form>
   );

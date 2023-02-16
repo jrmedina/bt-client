@@ -24,7 +24,7 @@ const CurrentWeather = () => {
     weatherData?.current.is_day === 1
       ? setCurStatus("day")
       : setCurStatus("night");
-  }, [location]);
+  }, [location, weatherData]);
 
   if (!weatherData) return <LoadingWheel />;
 
