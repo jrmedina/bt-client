@@ -1,0 +1,47 @@
+.day {
+  background: linear-gradient(
+    6deg,
+    rgba(245, 247, 18, 1) 0%,
+    rgba(253, 29, 29, 1) 75%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+.night {
+  color: aliceblue;
+  background: linear-gradient(
+    0deg,
+    rgba(18, 41, 247, 1) 0%,
+    rgba(118, 44, 170, 1) 50%,
+    rgba(137, 137, 137, 1) 100%
+  );
+}
+.current-weather{
+    border-radius: 3%;
+  width: 40%
+}
+
+.current-weather button{
+  margin-bottom: 2em;
+}
+
+@media (max-width: 424px) {
+.current-weather{
+
+  width: 95%
+}
+}
+
+@media (min-width: 425px) {
+    .current-weather{
+    border-radius: 3%;
+  width: 75%
+}
+}
+
+@media (min-width: 1024px) {
+    .current-weather{
+   
+  width: 40%
+}
+}

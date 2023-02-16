@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import "./Dropdown.css";
 
 const Dropdown = () => {
   const history = useHistory();

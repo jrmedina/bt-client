@@ -1,5 +1,25 @@
 .App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  background-color: aliceblue;
 }
 
+.title {
+  padding-bottom: 1em;
+}
 
+@media (max-width: 424px) {
+  .title {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+@media (min-width: 425px) {
+}
+@media (min-width: 1024px) {
+}
