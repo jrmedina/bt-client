@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { getForecast } from "../../utils/apiCalls";
+import { getWeather } from "../../utils/apiCalls";
 import ForecastCard from "../ForecastCard/ForecastCard";
-import LoadingWheel from "../LoadingWheel/LoadingWheel";
+import LoadingWheel from "../../assets/LoadingWheel/LoadingWheel";
 import "./ForecastContainer.css";
 
 const ForecastContainer = () => {
@@ -10,7 +10,7 @@ const ForecastContainer = () => {
   const [forecast, setForecast] = useState();
 
   useEffect(() => {
-    getForecast(location).then((data) =>
+    getWeather(`${location}/forecast`).then((data) =>
       setForecast(data.forecast.forecastday)
     );
   }, []);
